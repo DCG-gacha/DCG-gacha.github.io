@@ -12,14 +12,14 @@ function getIcon(list, n) {
 
   request.open("GET", url, true)
   request.responseType = "blob"
-  if (request.status == 200) {
   request.onload = function() {
-    var response = request.response
-    img.src = URL.createObjectURL(response)
-    document.getElementById("icons").appendChild(img)
+    if (request.status == 200) {
+      var response = request.response
+      img.src = URL.createObjectURL(response)
+      document.getElementById("icons").appendChild(img)
 
-    getIcon(list.slice(1), n - 1)
-  }
+      getIcon(list.slice(1), n - 1)
+    }
   }
 
   request.send()
