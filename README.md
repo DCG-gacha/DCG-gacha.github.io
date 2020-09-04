@@ -1,0 +1,3 @@
+# DCG-gacha simulator
+
+WIP...
