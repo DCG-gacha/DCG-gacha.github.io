@@ -1,16 +1,11 @@
 var p4 = 12.88
 
 
-function selectChild(stars, array) {
+function selectChild(name, array) {
   var res = []
 
-  for (var i = 0; i < stars.length; i++) {
-    if (stars[i] == 5)
-      res.push(list_5[array[i] % list_5.length] + "_01")
-    else if (stars[i] == 4)
-      res.push(list_4[array[i] % list_4.length] + "_01")
-    else
-      res.push(list_3[array[i] % list_3.length] + "_01")
+  for (var i = 0; i < name.length; i++) {
+    res.push(listDict[name[i]][array[i] % listDict[name[i]].length] + "_01")
   }
 
   return res
@@ -26,11 +21,11 @@ function main(p5, n, element, type) {
     var k = array[i] % 10000
 
     if (k < p5 * 100)
-      res.push(5)
+      res.push("5" + element + type)
     else if (k < p5 * 100 + p4 * 100)
-      res.push(4)
+      res.push("4" + element + type)
     else
-      res.push(3)
+      res.push("3" + element + type)
   }
 
   console.log(res)

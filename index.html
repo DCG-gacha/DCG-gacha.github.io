@@ -12,8 +12,41 @@
 
   </head>
   <body onload="init()">
-    <button id="11gachaButton" onclick="javascript:main(0.9, 11)">Gacha!</button>
-    <button id="5starGachaButton" onclick="javascript:main(100, 1)">5-Star Summon!</button>
+    <div>
+      <button id="11GachaButton" onclick='javascript:main(0.9, 11, "", "")'>Gacha!</button>
+      <button id="5PercentButton" onclick='javascript:main(5, 11, "", "")'>5% Gacha!</button>
+    </div>
+    <div>
+      <button id="11FireGachaButton" onclick='javascript:main(3, 11, "Fire", "")'>3% Fire Gacha!</button>
+      <button id="11WaterGachaButton" onclick='javascript:main(3, 11, "Water", "")'>3% Water Gacha!</button>
+      <button id="11GrassGachaButton" onclick='javascript:main(3, 11, "Grass", "")'>3% Grass Gacha!</button>
+      <button id="11LightGachaButton" onclick='javascript:main(3, 11, "Light", "")'>3% Light Gacha!</button>
+      <button id="11DarkGachaButton" onclick='javascript:main(3, 11, "Dark", "")'>3% Dark Gacha!</button>
+    </div>
+    <div>
+      <button id="11AttackerGachaButton" onclick='javascript:main(3, 11, "", "Attacker")'>3% Attacker Gacha!</button>
+      <button id="11TankerGachaButton" onclick='javascript:main(3, 11, "", "Tanker")'>3% Tanker Gacha!</button>
+      <button id="11HealerGachaButton" onclick='javascript:main(3, 11, "", "Healer")'>3% Healer Gacha!</button>
+      <button id="11BufferGachaButton" onclick='javascript:main(3, 11, "", "Buffer")'>3% Buffer Gacha!</button>
+      <button id="11DebufferGachaButton" onclick='javascript:main(3, 11, "", "Debuffer")'>3% Debuffer Gacha!</button>
+    </div>
+    <div>
+      <button id="5StarGachaButton" onclick='javascript:main(100, 1, "", "")'>5-Star Summon!</button>
+    </div>
+    <div>
+      <button id="5StarFireGachaButton" onclick='javascript:main(100, 1, "Fire", "")'>Fire 5-Star!</button>
+      <button id="5StarWaterGachaButton" onclick='javascript:main(100, 1, "Water", "")'>Water 5-Star!</button>
+      <button id="5StarGrassGachaButton" onclick='javascript:main(100, 1, "Grass", "")'>Grass 5-Star!</button>
+      <button id="5StarLightGachaButton" onclick='javascript:main(100, 1, "Light", "")'>Light 5-Star!</button>
+      <button id="5StarDarkGachaButton" onclick='javascript:main(100, 1, "Dark", "")'>Dark 5-Star!</button>
+    </div>
+    <div>
+      <button id="5StarGachaButton" onclick='javascript:main(100, 1, "", "Attacker")'>Attacker 5-Star!</button>
+      <button id="5StarGachaButton" onclick='javascript:main(100, 1, "", "Tanker")'>Tanker 5-Star!</button>
+      <button id="5StarGachaButton" onclick='javascript:main(100, 1, "", "Healer")'>Healer 5-Star!</button>
+      <button id="5StarGachaButton" onclick='javascript:main(100, 1, "", "Buffer")'>Buffer 5-Star!</button>
+      <button id="5StarGachaButton" onclick='javascript:main(100, 1, "", "Debuffer")'>Debuffer 5-Star!</button>
+    </div>
     <div id="res"></div>
   </body>
 </html>

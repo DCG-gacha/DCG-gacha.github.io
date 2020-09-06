@@ -2,6 +2,7 @@ var starList = ["3", "4", "5"]
 var elementList = ["Fire", "Water", "Grass", "Light", "Dark"]
 var typeList = ["Attacker", "Tanker", "Healer", "Buffer", "Debuffer"]
 var childDict = {}
+var listDict = {}
 
 
 function loadFile(path) {
@@ -17,29 +18,45 @@ function loadFile(path) {
   return result
 }
 
-function loadList(star, filename) {
-  if (star === null)
-    filename = "./resource/text/" + filename
+function loadList(star, name) {
+  if (star != null)
+    filename = "./resource/text/" + star + "star/" + "list_" + star + name + ".txt"
 
   else
-    filename = "./resource/text/" + star + "star/" + filename
+    filename = "./resource/text/list.txt"
 
   return loadFile(filename).trim().split("\n")
 }
 
-function mappingChild(list) {
-  for (var i = 0; i < list.length; i++) {
-    l = list[i].split("\t")
-    childDict[l[0]] = l[1]
+function mappingChild() {
+  for (var i = 0; i < listDict["all"].length; i++) {
+    l = listDict["all"][i].split("\t")
+    childDict[l[0]] = l[1].replace("_", " ")
   }
 }
 
 function init() {
-  list_5 = loadList("5", "list_5.txt")
-  list_4 = loadList("4", "list_4.txt")
-  list_3 = loadList("3", "list_3.txt")
+  starList.forEach(
+    star =>
+    listDict[star] = loadList(star, "")
+  )
+  starList.forEach(
+    star =>
+    typeList.forEach(
+      type =>
+      listDict[star + type] = loadList(star, type)
+    )
+  )
+  starList.forEach(
+    star =>
+    elementList.forEach(
+      element =>
+      listDict[star + element] = loadList(star, element)
+    )
+  )
 
-  list_all = loadList(null, "list.txt")
-  mappingChild(list_all)
+  listDict["all"] = loadList(null, null)
+
+  mappingChild()
 }
 

@@ -1,13 +1,14 @@
 starList = ["3", "4", "5"]
 elementList = ["Fire", "Water", "Grass", "Light", "Dark"]
 typeList = ["Attacker", "Tanker", "Healer", "Buffer", "Debuffer"]
-path = "../text/"
+inputPath = "../text/%sstar/details/%s.txt"
+outputPath = "../text/%sstar/list_%s.txt"
 
 def allMaker(s):
-    fout = open(path + s + "star/" + "list_" + s + ".txt", "w")
+    fout = open(outputPath % (s, s), "w")
     for e in elementList:
         for t in typeList:
-            fin = open(path + s + "star/details/" + s + e + t + ".txt", "r")
+            fin = open(inputPath % (s, s + e + t), "r")
             for l in fin.readlines():
                 c = l.strip()
                 if c[0] == "c" or c[0] == "m":
@@ -19,9 +20,9 @@ def allMaker(s):
 
 
 def elementMaker(s, e):
-    fout = open(path + s + "star/" + "list_" + s + e + ".txt", "w")
+    fout = open(outputPath % (s, s + e), "w")
     for t in typeList:
-        fin = open(path + s + "star/details/" + s + e + t + ".txt", "r")
+        fin = open(inputPath % (s, s + e + t), "r")
         for l in fin.readlines():
             c = l.strip()
             if c[0] == "c" or c[0] == "m":
@@ -32,9 +33,9 @@ def elementMaker(s, e):
     fout.close()
 
 def typeMaker(s, t):
-    fout = open(path + s + "star/" + "list_" + s + t + ".txt", "w")
+    fout = open(outputPath % (s, s + t), "w")
     for e in elementList:
-        fin = open(path + s + "star/details/" + s + e + t + ".txt", "r")
+        fin = open(inputPath % (s, s + e + t), "r")
         for l in fin.readlines():
             c = l.strip()
             if c[0] == "c" or c[0] == "m":

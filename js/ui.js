@@ -7,7 +7,7 @@ function getIcon(list, n) {
   img.width = 64
   img.title = childDict[list[0]]
 
-  var url = "./resource/image/childIcon/" + list[0] + ".png"
+  var url = "./resource/image/child/" + list[0] + ".png"
   var request = new XMLHttpRequest()
 
   request.open("GET", url, true)
