@@ -15,7 +15,7 @@ function printLoadImg(star, t) {
   var img = document.createElement("img")
   var divLoading = document.getElementById("loading")
 
-  img.src = "https://dcg-gacha.github.io/resource/image/ui/summon_" + star + ".png"
+  img.src = "https://dcg-gacha.github.io/resource/image/ui/summon_" + star + ".gif"
   img.width = 405
   img.height = 720
 
@@ -29,7 +29,7 @@ function printLoadImg(star, t) {
 function printBg(star) {
   var bgImg = document.getElementById("bg")
 
-  bgImg.src = "https://dcg-gacha.github.io/resource/image/ui/summon_" + star + "_bg.png"
+  bgImg.src = "https://dcg-gacha.github.io/resource/image/ui/summon_" + star + "_bg.jpg"
 }
 
 function printThumb(childName) {
