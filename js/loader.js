@@ -12,7 +12,7 @@ function loadFile(path) {
   request.open("GET", path, false)
   request.send()
 
-  if (request.status == 200)
+//  if (request.status == 200)
     result = request.responseText
 
   return result

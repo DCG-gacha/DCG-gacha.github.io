@@ -1,12 +1,77 @@
 body {
-  margin: 0;
-  padding: 8px 8px;
+  background-image: url("../resource/image/ui/bg.png");
+  background-repeat: repeat;
+  margin: 20px 10px;
+  font-family: "Malgun Gothic";
+  font-weight: bold;
 }
 
 body, html {
-  background-color: #404040;
   max-width: 100%;
   max-height: 100%;
+}
+
+div, p {
+  margin: 5px 5px;
+}
+
+.box {
+  border-radius: 16px;
+  border: 2px solid #e0a000;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px; 
+  margin-bottom: 16px;
+/*  width: 200px; */
+}
+
+.screen img {
+  margin: auto;
+}
+
+.boxtitle {
+  color: #e0a000;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  max-width: 320px;
+  padding: 8px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.screen {
+  position: relative;
+}
+
+.left {
+  position: absolute;
+  width: 405px;
+  margin: auto;
+  text-align: center;
+}
+
+#loading {
+  position: absolute;
+}
+
+.screen .top {
+  top: 260px;
+}
+
+.screen .middle {
+  top: 385px;
+}
+
+.screen .bottom {
+  top: 500px;
+}
+
+.childName {
+  border-radius: 3px;
+  border: 2px solid #404040;
+  background-color: rgba(192, 192, 192, 0.8);
+  display: inline-block;
+  font-size: 20px;
 }
 
 footer {
@@ -20,15 +85,3 @@ footer {
   font-size: 12px;
 }
 
-canvas {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-div {
-  font-size: large;
-}
-
-p {
-  font-size: large;
-}
